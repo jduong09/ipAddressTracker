@@ -1,0 +1,13 @@
+body {
+  min-height: 100vh;
+}
+
+header {
+  background-image: url('../images/pattern-bg.png');
+  background-repeat: no-repeat;
+  height: 30%;
+}
+
+#map {
+  height: 180px;
+}
