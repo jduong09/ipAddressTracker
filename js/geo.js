@@ -13,8 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const listSearchResults = document.querySelector('.search-results > ul');
 
   const map = L.map('map', { zoomControl: false }).setView([34.04915, -118.09462], 16);
-  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-          attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  L.tileLayer('https://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+          attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
 
   inputSubmit.addEventListener('click', (e) => {
