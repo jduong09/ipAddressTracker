@@ -97,3 +97,85 @@ main {
 #map {
   height: 100%;
 }
+
+@media (min-width: 766px) {
+  form {
+    justify-content: center;
+  }
+
+  .search-results {
+    text-align: start;
+  }
+
+  .search-results > ul {
+    display: flex;
+    padding: 1rem 0;
+  }
+
+  .search-results > ul > li {
+    width: 25%;
+    margin: 0;
+    padding: 0 1rem;
+    position: relative;
+  }
+
+  .search-results > ul > li::after {
+    content: '';
+    width: 1px;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: hsla(0, 0%, 59%, .25)
+  }
+
+  .search-results > ul > li:last-of-type::after {
+    content: none;
+  }
+}
+
+@media (min-width: 922px) {
+  h1 {
+    padding: 1.5rem 0;
+  }
+
+  form {
+    width: 80%;
+    margin-bottom: 1.5rem;
+  }
+
+  .search-results > ul > li::after {
+    height: 75%;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    padding: 2rem 0;
+  }
+
+  form {
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+
+  .search-results {
+    width: 80%;
+  }
+
+  .search-results > ul {
+    padding: 1.5rem 0;
+  }
+
+  .search-results > ul > li {
+    width: 20%;
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .search-results > ul > li {
+    width: 18%;
+  }
+}

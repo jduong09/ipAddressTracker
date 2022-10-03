@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const inputSubmit = document.getElementById('input-submit');
   const listSearchResults = document.querySelector('.search-results > ul');
 
-  const map = L.map('map').setView([34.04915, -118.09462], 16);
+  const map = L.map('map', { zoomControl: false }).setView([34.04915, -118.09462], 16);
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
           attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
@@ -48,27 +48,3 @@ document.addEventListener('DOMContentLoaded', () => {
     httpRequest.send();
   });
 });
-
-/*
-{
-  "ip":"192.212.174.101",
-  "location": {
-    "country":"US",
-    "region":"California",
-    "city":"South San Gabriel",
-    "lat":34.04915,
-    "lng":-118.09462,
-    "postalCode":"",
-    "timezone":"-07:00",
-    "geonameId":5397771
-  },
-  "as": {
-    "asn":7127,
-    "name":"SCE",
-    "route":"192.212.0.0\/15",
-    "domain":"",
-    "type":""
-  },
-  "isp":"Southern California Edison"
-}
-*/
