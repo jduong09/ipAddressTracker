@@ -36,7 +36,11 @@ document.addEventListener('DOMContentLoaded', () => {
         listSearchResults.children[3].children[1].innerHTML = response.isp;
 
         map.setView([response.location.lat, response.location.lng], 16);
-        L.marker([response.location.lat, response.location.lng]).addTo(map);
+        const myIcon = L.icon({
+          iconUrl: './images/icon-location.svg',
+          iconSize: [46, 56]
+        });
+        L.marker([response.location.lat, response.location.lng], { icon: myIcon }).addTo(map);
       }
     }
 
